@@ -17,12 +17,13 @@ package ai.certifai.basic.ex1;
 
 import ai.certifai.util.OutputParser;
 
+
 /**
  * Iconic Hello World Quickstart
  *
  * @author codenamewei
  */
-public class HelloWorld
+class HelloWorld
 {
     static OutputParser out;
 

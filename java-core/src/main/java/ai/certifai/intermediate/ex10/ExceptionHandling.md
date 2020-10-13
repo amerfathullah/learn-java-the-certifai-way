@@ -54,25 +54,22 @@ finally
 ```
 ## **What To Do**  
 
-Rewrite the function block below starting from line 21 to handle exception with try-catch-finally.  
-eval.evaluatePerLine("File is not found!") in the **catch** loop if file is not found
-```$xslt
-public static void main(String[] args) throws Exception
-{
-    String filePathInString = "metadata/sample.txt"; //FILE DID NOT EXIST
+Rewrite the function block
+- [_readFile()_](https://github.com/CertifaiAI/learn-java-the-certifai-way/blob/master/java-core/src/main/java/ai/certifai/intermediate/ex10/ExceptionHandling.java#L41)
+- [_divideByZero()_](https://github.com/CertifaiAI/learn-java-the-certifai-way/blob/master/java-core/src/main/java/ai/certifai/intermediate/ex10/ExceptionHandling.java#L51)
+- [_retrieveObject()_](https://github.com/CertifaiAI/learn-java-the-certifai-way/blob/master/java-core/src/main/java/ai/certifai/intermediate/ex10/ExceptionHandling.java#L58)
+to catch Exception  
+**Tips:** return e.getClass().getCanonicalName() for each function block for program to successfully execute
 
-    //Rewrite the statement below onwards to catch the exception with try-catch-finally
-    File filePath = new File(filePathInString);
-    Scanner input = new Scanner(filePath);
 
-    //Write try-finally-catch from here onwards
+## **Sample Input** 
 
-    eval.printResult();
-}
+```
+int value = 1000 / 0;
 ```
 
 ## **Sample Output** 
 
 ```
-File is Not Found!
+java.lang.ArithmeticException
 ```

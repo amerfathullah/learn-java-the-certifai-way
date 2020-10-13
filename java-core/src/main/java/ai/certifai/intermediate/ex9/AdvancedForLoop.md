@@ -18,6 +18,8 @@ Each value _a_ is calculated with the formula of
    <img src="metadata/2.jpg">
  </p>  
  
+**Note: a<sub>smaller than 0</sub> = 0, always**
+ 
 ## **Condition:**
 - **_m >= 1_**
 - **_n >= 0_**
@@ -29,7 +31,8 @@ Iterate over an array of integers given in the function. Modify the _assessArray
  </p>
 
 ## **Sample Input**
-2 2 3
+2 2 3 \
+Note: m = 2, n = 2, b = 3
 
 ## **Sample Output**
 7 18
