@@ -33,11 +33,14 @@ public class DataTypes
         in = new InputParser(DataTypes.class);
         out = new OutputParser(DataTypes.class, in);
 
-        /**
-         Enter your code here
-         Tips: out.evaluate({content}) has to be used for the program to be success
-         **/
-
+        String a = "Nasi Lemak!";
+        int b = 20;
+        float c = 100.054f;
+        boolean d = true;
+        out.evaluate(a);
+        out.evaluate(b);
+        out.evaluate(c);
+        out.evaluate(d);
         out.printResult();
     }
 }

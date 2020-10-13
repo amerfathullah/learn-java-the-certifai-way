@@ -39,10 +39,11 @@ public class ForLoop
         {
             int linesPerUseCase = in.getCurrentUseCaseTotalLines();
 
-            /**
-             * Enter your code here
-             * Tips: out.evaluate({content}) has to be used to pass the program
-             */
+            for(int j = 0; j < linesPerUseCase; j++)
+            {
+                String abc = in.getStringInput();
+                out.evaluate(abc);
+            }
         }
 
         out.printResult();

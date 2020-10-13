@@ -58,11 +58,14 @@ public class AdvancedForLoop
     ////a_m = a_(m - 1) + 2^(n + m) + b
     public static void assessArrayValue(int m, int n, int b)
     {
-        List<Integer> array = null;
-        /**
-         Modify your code in this function
-         Do the accordingly changes to this function to reach the successful run of the code
-         **/
+        List<Integer> array = new ArrayList<Integer>();
+
+        int a = 0;
+        for(int i=0; i < m; i++)
+        {
+            a = (int) (a + Math.pow(2,n+i) + b);
+            array.add(a);
+        }
 
         String output = Conversion.ListIntegerToString(array);
 

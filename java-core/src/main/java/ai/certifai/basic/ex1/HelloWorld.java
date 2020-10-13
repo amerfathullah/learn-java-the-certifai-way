@@ -35,7 +35,7 @@ public class HelloWorld
         Complete the program by making changes to line 38
         Tips: change the content assign to variable firstString
          **/
-        String firstString = null;
+        String firstString = "Hello World!";
 
         out.evaluate(firstString);
 

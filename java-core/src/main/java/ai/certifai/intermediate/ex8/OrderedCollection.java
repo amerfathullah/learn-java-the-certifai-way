@@ -52,9 +52,8 @@ public class OrderedCollection
 
     public static void iterate(List<Integer> array)
     {
-        /**
-         Enter your code in this function
-         Tips: out.evaluate({content}) has to be used for the program to be success
-         **/
+        for (int i = 0; i < array.size(); i++) {
+            out.evaluate(array.get(i));
+        }
     }
 }
