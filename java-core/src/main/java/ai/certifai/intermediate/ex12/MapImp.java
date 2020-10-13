@@ -74,12 +74,39 @@ public class MapImp
 
     private static void configKeyValue(@NonNull Map keyValue, @NonNull String action, @NonNull String country, String phoneCode) {
 
-        /**
-         Modify your code in this function
-         Do the accordingly changes to this function to reach the successful run of the code
-         Tips: out.evaluate({content}) has to be used for the program to be success
-         **/
-
+        if(action.equals(GET))
+        {
+            if(keyValue.get(country) == null)
+            {
+                out.evaluate("False");
+            }
+            else
+            {
+                out.evaluate(keyValue.get(country));
+            }
+        }
+        else if(action.equals(DELETE))
+        {
+            if(keyValue.remove(country) == null)
+            {
+                out.evaluate("False");
+            }
+            else
+            {
+                out.evaluate("True");
+            }
+        }
+        else if(action.equals(ADD))
+        {
+            if(keyValue.put(country, phoneCode) == null)
+            {
+                out.evaluate("True");
+            }
+            else
+            {
+                out.evaluate("False");
+            }
+        }
     }
 
     private static void initKeyValue(Map keyValue)

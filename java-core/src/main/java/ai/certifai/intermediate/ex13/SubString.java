@@ -49,11 +49,13 @@ public class SubString
 
     private static String getExtensionIfExist(String input)
     {
-        /**
-         Modify your code in this function
-         Do the accordingly changes to this function to reach the successful run of the code
-         Change the returning value in line 57
-         **/
-        return null;
+        if (input.contains("."))
+        {
+            return input.substring(input.indexOf(".")+1);
+        }
+        else
+        {
+            return "It's not a file!";
+        }
     }
 }

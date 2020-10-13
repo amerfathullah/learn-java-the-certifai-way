@@ -23,15 +23,35 @@ import java.util.List;
 
 class QuickSort
 {
-    /**
-     Modify your code in this class
-     Do the accordingly changes to reach the successful run of the code
-     **/
+    public static void swap(List<Integer> array, int beginIndex, int endIndex)
+    {
+        int tmp = array.get(beginIndex);
+        array.set(beginIndex, array.get(endIndex));
+        array.set(endIndex, tmp);
+    }
 
     public List<Integer> sort(List<Integer> array, int beginIndex, int endIndex)
     {
-
-        return null;
+        if(beginIndex < endIndex)
+        {
+            int pivot = beginIndex;
+            int left = beginIndex+1;
+            int right = endIndex;
+            int pivotValue = array.get(pivot);
+            while(left <= right)
+            {
+                while(left <= endIndex && pivotValue >= array.get(left))
+                    left++;
+                while (right > beginIndex && pivotValue < array.get(right))
+                    right--;
+                if(left < right)
+                    swap(array, left, right);
+            }
+            swap(array, pivot, left-1);
+            sort(array, beginIndex, right - 1);
+            sort(array, right + 1, endIndex);
+        };
+        return array;
     }
 }
 

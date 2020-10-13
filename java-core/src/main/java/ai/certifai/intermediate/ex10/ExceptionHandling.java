@@ -43,24 +43,43 @@ public class ExceptionHandling
         String filePathInString = "metadata/sample.txt"; //FILE DID NOT EXIST
 
         //Rewrite the statement below onwards to catch the exception with try-catch-finally
-        File filePath = new File(filePathInString);
-        Scanner input = new Scanner(filePath);
+        try
+        {
+            File filePath = new File(filePathInString);
+            Scanner input = new Scanner(filePath);
+        }
+        catch(Exception e)
+        {
+            return e.getClass().getCanonicalName();
+        }
         return "";
     }
 
     private static String divideByZero() throws Exception
     {
-        int value = 1000 / 0;
-
+        try
+        {
+            int value = 1000 / 0;
+        }
+        catch(Exception e)
+        {
+            return e.getClass().getCanonicalName();
+        }
         return "";
     }
 
     private static String retrieveObject() throws Exception
     {
-        String buffer = null;
+        try
+        {
+            String buffer = null;
 
-        buffer.length();
-
+            buffer.length();
+        }
+        catch(Exception e)
+        {
+            return e.getClass().getCanonicalName();
+        }
         return "";
     }
 }

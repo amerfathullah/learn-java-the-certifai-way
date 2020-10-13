@@ -47,12 +47,12 @@ public class AdvancedSubString
 
     private static String processString(String input)
     {
-        /**
-         Modify your code in this function
-         Do the accordingly changes to this function to reach the successful run of the code
-         Change the returning value in line 55
-         */
-        return null;
+        input = input.trim();
+        input = input.replaceAll(" ", "_");
+        if (input.contains("."))
+            return input.substring(0,input.indexOf("."));
+        else
+            return input;
     }
 
 }

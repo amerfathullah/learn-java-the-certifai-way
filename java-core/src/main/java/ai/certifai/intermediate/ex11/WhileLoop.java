@@ -55,12 +55,13 @@ public class WhileLoop
     private static int getTotalNumberOfLines(File inputFile) throws Exception
     {
         BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        int x = 0;
 
-        /**
-         Modify your code in this function
-         Change the return value to get the success of the program
-         **/
-        return 0;
+        while(reader.readLine() != null)
+        {
+            x++;
+        }
+        return x;
     }
 
 }

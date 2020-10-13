@@ -16,6 +16,13 @@
 package ai.certifai.maven;
 
 import ai.certifai.util.PathHandler;
+import org.bytedeco.opencv.opencv_core.Mat;
+
+import static org.bytedeco.opencv.global.opencv_highgui.*;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
+import static org.bytedeco.opencv.global.opencv_imgproc.COLOR_RGB2GRAY;
+import static org.bytedeco.opencv.global.opencv_imgproc.cvtColor;
 
 /**
  * Maven
@@ -25,9 +32,9 @@ import ai.certifai.util.PathHandler;
 public class RunMaven {
     public static void main(String[]args)
     {
-        /*
+
         //TODO: Change this into your own image path
-        String sourceImagePath = "C:\\Users\\chiaw\\Desktop\\images\\chip\\70.jpg";
+        String sourceImagePath = "C:\\Users\\amerf\\Downloads\\tsushima.jpg";
 
         //Check image validity
         if(PathHandler.isFileValid(sourceImagePath) == false)
@@ -65,6 +72,6 @@ public class RunMaven {
 
         //Press "Esc" to close window
         if (waitKey(0) == 27) destroyAllWindows();
-        */
+
     }
 }
